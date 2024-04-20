@@ -1,0 +1,14 @@
+local monarch = require("monarch.monarch")
+require("modules.hashes")
+local pi = require("modules.player_info")
+
+function init(self)
+	pi:add_coins(1000)
+	timer.delay(0, false, function()
+		monarch.show(SCENES.MENU)
+	end)
+end
+
+function final(self)
+
+end
